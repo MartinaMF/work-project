@@ -1,0 +1,95 @@
+.site-btn--group {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px;
+  padding: 0;
+
+  @include media-breakpoint-down(xs) {
+    flex-direction: column;
+    align-items: center;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      min-width: 170px;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    margin: -15px;
+  }
+
+  & > * {
+    padding: 5px !important;
+
+    @include media-breakpoint-up(md) {
+      padding: 15px !important;
+    }
+  }
+}
+
+.site-btn {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 10px 15px 8px;
+  border: 1px solid transparent;
+  border-radius: $globalBorderRadius;
+  background: transparent;
+  color: transparent;
+  font-size: 14px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 1.25px;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: lowercase;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  transition: .4s all ease;
+
+  @include media-breakpoint-up(md) {
+    padding: 24px 25px 22px;
+  }
+
+  &.no-responsive {
+    padding: 10px 20px 8px;
+  }
+
+  &.bigger {
+    @include media-breakpoint-up(md) {
+      padding: 20px 30px 18px;
+    }
+  }
+
+  &:not(.has-btn-icon)::after {
+    @include icomoon();
+
+    content: '\e900';
+    margin-left: 15px;
+    font-size: 12px;
+  }
+}
+
+.site-btn--primary {
+  border-color: $primary;
+  background: $primary;
+  color: #ffffff;
+
+  &:not(:disabled):hover {
+    background: #ffffff;
+    color: $primary;
+  }
+}
+
+.site-btn--secondary {
+  border-color: #ffffff;
+  color: #ffffff;
+
+  &:not(:disabled):hover {
+    background: #ffffff;
+    color: $primary;
+  }
+}

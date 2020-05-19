@@ -1,0 +1,148 @@
+section.section.section--product-models {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .tabs {
+    margin-top: 30px;
+  }
+
+  ul.nav {
+    width: 100%;
+    margin-top: 50px;
+
+    li.nav-item.col-6 {
+      border-radius: $globalBorderRadius 0 0 $globalBorderRadius;
+
+      a.nav-link {
+        height: 50px;
+        border-radius: $globalBorderRadius 0 0 $globalBorderRadius;
+        background-color: #f5f5f5;
+        color: black;
+        font-weight: 700;
+        line-height: 35px;
+        text-align: center;
+
+        &.active {
+          background-color: $primary;
+          color: #ffffff;
+        }
+      }
+
+      a.nav-link.virtual {
+        border-radius: 0 $globalBorderRadius $globalBorderRadius 0;
+        text-align: center;
+      }
+    }
+
+    li.nav-item.col-6.device {
+      padding-right: 0;
+    }
+
+    li.nav-item.col-6.virtual {
+      padding-left: 0;
+      border-radius: 0 $globalBorderRadius $globalBorderRadius 0;
+    }
+  }
+
+  #pills-device {
+    margin-top: 45px;
+
+    .model-hld {
+      margin-top: 10px;
+      margin-bottom: 60px;
+
+      .model-image img {
+        width: 40%;
+      }
+
+      h5 {
+        margin-top: 20px;
+        color: black;
+      }
+
+      h5 span {
+        color: $primary;
+      }
+
+      p {
+        @include media-breakpoint-up(md) {
+          font-size: 16px;
+        }
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+
+  }
+
+  #pills-virtual {
+    .images-row {
+      .col-6.left-image {
+        margin: 0;
+        padding-right: 2px;
+
+        img {
+          border-radius: $globalBorderRadius;
+        }
+      }
+
+      .col-6.right-image {
+        margin: 0;
+        padding-left: 2px;
+
+        img {
+          border-radius: $globalBorderRadius;
+        }
+      }
+    }
+
+    .description {
+      margin-top: 35px;
+
+      .title {
+        color: black;
+      }
+    }
+
+    article {
+      display: block;
+
+      p {
+        padding-top: 30px;
+      }
+
+      @include media-breakpoint-up(md) {
+        display: flex;
+
+        & > * {
+          flex: 0 0 calc(100% / 2);
+          width: calc(100% / 2);
+          margin: 0;
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+      }
+    }
+
+    .description-2 {
+      margin-top: 130px;
+
+      h3 {
+        color: black;
+      }
+
+      p {
+        @include media-breakpoint-up(md) {
+          font-size: 16px;
+        }
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      img {
+        margin-bottom: 35px;
+        border-radius: $globalBorderRadius;
+      }
+    }
+  }
+}

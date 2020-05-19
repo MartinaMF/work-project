@@ -1,0 +1,38 @@
+@include media-breakpoint-up(lg) {
+  section.section.section--reseller-login .right-side {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -5px;
+      z-index: -1;
+      width: 1px;
+      height: 100%;
+      background: $light;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  section.section.section--reseller-login .right-side::before {
+    left: -30px;
+  }
+}
+
+section.section.section--reseller-login form {
+  @extend .form-complete;
+
+  .button-group {
+    margin-top: 20px;
+
+    button {
+      height: 34px;
+
+      @include media-breakpoint-up(md) {
+        height: 60px;
+      }
+    }
+  }
+}

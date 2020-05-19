@@ -1,0 +1,23 @@
+aside.aside-bar.aside-bar--pdf-downloader {
+  border: 1px solid #ccccd1;
+  border-radius: $globalBorderRadius;
+
+  form {
+    @extend .form-complete;
+
+    .button-group {
+      margin-top: 20px;
+
+      button {
+        width: 100%;
+        height: 34px;
+        padding-right: 0;
+        padding-left: 0;
+
+        @include media-breakpoint-up(md) {
+          height: 60px;
+        }
+      }
+    }
+  }
+}

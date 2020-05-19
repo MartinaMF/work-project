@@ -1,0 +1,140 @@
+.form-base {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  .h-form {
+    display: none !important;
+  }
+
+  .form__group-errors {
+    display: block;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    transition: .2s all ease;
+
+    li {
+      display: block;
+      margin: 0;
+      padding: 2px 15px;
+      color: $danger;
+      font-family: $font-family-sans-serif;
+      font-size: 12px;
+      font-weight: $font-weight-base;
+      list-style-type: none;
+    }
+
+    li:first-child {
+      margin-top: 6px;
+    }
+  }
+
+  .form-message {
+    display: none;
+    width: 100%;
+    margin: 10px 0 0;
+    padding: 7px 10px;
+    color: #ffffff;
+    font-family: $font-family-sans-serif;
+    font-size: 14px;
+    font-weight: $font-weight-base;
+    text-align: center;
+
+    &.is-success {
+      background: green;
+    }
+
+    &.is-error {
+      background: red;
+    }
+  }
+}
+
+.form-complete {
+  @extend .form-base;
+
+  .input-group {
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+
+  .input-group input,
+  .input-group textarea {
+    display: block;
+    width: 100%;
+    height: 34px;
+    margin: 0;
+    padding: 8px 15px;
+    border: 1px solid #ccccd1;
+    border-radius: $globalBorderRadius;
+    background-color: #ffffff;
+    font-family: $font-family-sans-serif;
+    font-size: 14px;
+    font-weight: $font-weight-base;
+    line-height: 160%;
+
+    @include media-breakpoint-up(md) {
+      height: 60px;
+      padding: 20px 30px;
+      font-size: 16px;
+    }
+
+    &,
+    &::placeholder {
+      color: #666666;
+    }
+  }
+
+  .input-group textarea {
+    height: 220px;
+    resize: none;
+  }
+
+  .hiddenelements {
+    display: none;
+  }
+
+  .captcha {
+    padding-top: 15px;
+
+    @include media-breakpoint-up(xl) {
+      padding-top: 5px;
+    }
+  }
+
+  label {
+    display: block;
+    margin: 0 0 3px;
+    padding: 0;
+    color: #ffffff;
+    font-size: 14px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 16px;
+    }
+  }
+
+  .form-message {
+    margin-top: 20px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 16px;
+    }
+  }
+
+  .form__group-errors li {
+    @include media-breakpoint-up(md) {
+      padding-right: 30px;
+      padding-left: 30px;
+      font-size: 14px;
+    }
+  }
+}

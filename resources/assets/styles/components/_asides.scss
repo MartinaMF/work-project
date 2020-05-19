@@ -1,0 +1,19 @@
+@import 'asides/video';
+@import 'asides/image';
+@import 'asides/events-socials';
+
+aside.aside {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 30px 0 0;
+  padding: 0;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 50px;
+  }
+
+  &:first-child {
+    margin-top: 0 !important;
+  }
+}

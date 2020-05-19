@@ -1,0 +1,40 @@
+{
+    "key": "group_5dcafce518a81",
+    "title": "Forms: Newsletter",
+    "fields": [
+        {
+            "key": "field_5dcafce51d354",
+            "label": "Email",
+            "name": "email",
+            "type": "read_only",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "copy_to_clipboard": 0,
+            "display_type": "text"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "forms_newsletter"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1581886935
+}

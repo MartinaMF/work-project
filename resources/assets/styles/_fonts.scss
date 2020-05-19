@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap&subset=latin-ext');
+
+@font-face {
+  font-family: 'Nexa';
+  font-weight: 300;
+  src: url('#{$font-path}/38E64A_1_0.eot');
+  src: url('#{$font-path}/38E64A_1_0.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-path}/38E64A_1_0.woff2') format('woff2'),
+    url('#{$font-path}/38E64A_1_0.woff') format('woff'),
+    url('#{$font-path}/38E64A_1_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nexa';
+  font-weight: 900;
+  src: url('#{$font-path}/38E64A_0_0.eot');
+  src: url('#{$font-path}/38E64A_0_0.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-path}/38E64A_0_0.woff2') format('woff2'),
+    url('#{$font-path}/38E64A_0_0.woff') format('woff'),
+    url('#{$font-path}/38E64A_0_0.ttf') format('truetype');
+}

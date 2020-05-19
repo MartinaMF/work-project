@@ -1,0 +1,99 @@
+.event-item {
+  display: block;
+  margin: 30px 0 0;
+  padding: 0;
+
+  .img-hld {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border-radius: $globalBorderRadius;
+    background-color: #000000;
+
+    @include media-breakpoint-only(sm) {
+      height: 190px;
+    }
+
+    .img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      transition: .4s all ease;
+    }
+
+    .date {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 60px;
+      height: 52px;
+      margin: 0;
+      padding: 9px 0 0;
+      border-radius: $globalBorderRadius 0 $globalBorderRadius 0;
+      background-color: $primary;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: $font-weight-bold;
+      line-height: 1.2;
+      text-align: center;
+      text-transform: lowercase;
+    }
+  }
+
+  &:hover .img-hld .img {
+    transform: scale(1.2) rotate(3deg);
+  }
+
+  h4 {
+    display: block;
+    margin: 25px 0 0;
+    padding: 0;
+    color: #000000;
+    font-size: 20px;
+    line-height: 1.25;
+    transition: .4s color ease;
+
+    @include media-breakpoint-up(md) {
+      font-size: 24px;
+    }
+  }
+
+  &:hover h4 {
+    color: $primary;
+  }
+
+  p:not(.link) {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+      margin: 25px 0 0;
+      padding: 0;
+      color: #666666;
+      font-size: 16px;
+    }
+  }
+
+  p.link {
+    @extend .site-btn;
+
+    margin-top: 25px;
+    padding: 0;
+    color: $primary;
+  }
+
+  &:hover p.link {
+    color: #000000;
+  }
+}

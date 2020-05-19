@@ -1,0 +1,427 @@
+header.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  width: 100%;
+  height: 50px;
+  padding-right: 50px;
+  background: #000000;
+  box-shadow: 0 2px 0 rgba(#ffffff, .4);
+  transition: .4s all ease;
+
+  @include media-breakpoint-up(md) {
+    height: 90px;
+    padding-right: 0;
+
+    &.is-small {
+      height: 60px;
+    }
+
+    .brand {
+      transition: .4s width ease;
+    }
+
+    &.is-small .brand {
+      width: 90px;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 115px;
+  }
+
+  .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    @include media-breakpoint-up(xl) {
+      padding-right: 70px;
+      padding-left: 70px;
+    }
+  }
+
+  .brand {
+    display: block;
+    width: 80px;
+    margin: 0;
+    padding: 0;
+
+    @include media-breakpoint-up(md) {
+      width: 100px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 110px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 130px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .header--nav {
+    flex-grow: 1;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 145px;
+    margin: 0;
+    padding: 15px 20px;
+    border-radius: 0;
+    background: #000000;
+    transform: translateX(100%);
+    transition: .4s transform ease;
+
+    @include media-breakpoint-up(md) {
+      position: relative;
+      top: 0;
+      height: 100%;
+      padding: 0 35px;
+      border-radius: 0;
+      background: transparent;
+      transform: none;
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      margin-left: 15px;
+      padding-right: 0;
+      padding-left: 0;
+      border-left: 2px solid rgba(#ffffff, .4);
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-left: 50px;
+      padding-left: 35px;
+    }
+
+    & > ul {
+      display: block;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+      @include media-breakpoint-up(md) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      @include media-breakpoint-up(lg) {
+        justify-content: flex-start;
+      }
+
+      li:not(.phone) {
+        display: block;
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        padding: 3px 0;
+
+        @include media-breakpoint-up(md) {
+          display: flex;
+          align-items: center;
+          height: 100%;
+        }
+
+        @include media-breakpoint-up(lg) {
+          padding-right: 10px;
+          padding-left: 10px;
+        }
+
+        @media screen and (min-width: 1200px) and (max-width: 1299px) {
+          padding-right: 4px;
+          padding-left: 4px;
+        }
+      }
+
+      li:not(.phone) a {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        padding: 0;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+        text-transform: lowercase;
+
+        @include media-breakpoint-up(xl) {
+          font-size: 16px;
+        }
+      }
+
+      li:not(.phone).active > a {
+        color: $primary;
+      }
+
+      li:not(.phone) a::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        max-width: 0;
+        height: 1px;
+        background: #ffffff;
+        transition: .4s max-width ease;
+      }
+
+      li:not(.phone) > a:hover::before,
+      li:not(.phone).active > a::before {
+        max-width: 100%;
+      }
+
+      li:not(.phone).active > a::before {
+        background-color: $primary;
+      }
+
+      ul {
+        padding: 0;
+      }
+
+      ul li:not(.phone) {
+        opacity: .8;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      ul li:not(.phone) a {
+        font-size: 11px;
+
+        @include media-breakpoint-up(xl) {
+          font-size: 16px;
+        }
+      }
+
+      ul li:not(.phone) a::before {
+        display: none;
+      }
+
+      ul li:not(.phone).active a {
+        color: #ffffff;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      & > ul ul {
+        position: absolute;
+        top: 100%;
+        left: -25px;
+        min-width: 180px;
+        visibility: hidden;
+        opacity: 0;
+        padding: 15px 25px;
+        border: 1px solid #ffffff;
+        border-top: 0;
+        background: #000000;
+        text-align: left;
+        pointer-events: none;
+        transition: .4s all ease;
+
+        li:not(.phone) {
+          opacity: 1;
+        }
+
+        li:not(.phone) a {
+          padding-left: 20px;
+          transition: .4s color ease;
+        }
+
+        li:not(.phone) a::after {
+          @include icomoon();
+
+          content: '\e900';
+          position: absolute;
+          top: 3px;
+          left: 0;
+          color: $primary;
+        }
+
+        li:not(.phone) a:hover {
+          color: $primary;
+        }
+      }
+
+      & > ul li:not(.phone):hover > ul {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      & > ul ul {
+        min-width: 210px;
+
+        li:not(.phone) {
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+
+        li:not(.phone) a::after {
+          top: 5px;
+        }
+      }
+    }
+  }
+
+  .nav-mobile-button {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 50px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: #ffffff;
+    user-select: none;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
+    span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    &::before,
+    &::after,
+    span::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60%;
+      height: 2px;
+      background: #000000;
+      transform: translateX(-50%) translateY(-50%);
+      transition: .4s all ease;
+    }
+
+    &::before {
+      margin-top: -10px;
+    }
+
+    &::after {
+      margin-top: 10px;
+    }
+
+    &.is-triggered {
+      &::before {
+        margin-top: 0;
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      }
+
+      &::after {
+        margin-top: 0;
+        transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+      }
+
+      span::before {
+        width: 0;
+      }
+
+      & + .header--nav {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .login-button-nav {
+    display: block;
+    margin: 15px 0 0;
+    padding: 0;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
+  }
+
+  .login-button {
+    display: none;
+
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
+
+    i {
+      margin-right: 3px;
+      font-size: 12px;
+
+      @include media-breakpoint-up(xl) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .phone-button {
+    @include media-breakpoint-up(sm) {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      margin-left: 15px;
+      padding-left: 15px;
+      border-left: 2px solid rgba(#ffffff, .4);
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-left: 50px;
+      padding-left: 50px;
+    }
+  }
+
+  .phone-button a,
+  .login-button a {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: $font-weight-bold;
+    line-height: 1;
+
+    @include media-breakpoint-up(xl) {
+      font-size: 16px;
+    }
+  }
+
+  .right-area {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+body.big-hero header.header:not(.is-small),
+body.home header.header:not(.is-small) {
+  background: rgba(#000000, .4);
+}
+
+body.hide-nav header.header {
+  @include media-breakpoint-down(sm) {
+    transform: translateY(-50px);
+  }
+}

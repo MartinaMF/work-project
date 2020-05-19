@@ -1,0 +1,67 @@
+aside.aside--events-socials {
+  border-top: 1px solid #ccccd1;
+
+  ul,
+  ul li {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 25px;
+  }
+
+  .author-info {
+    padding-top: 50px;
+  }
+
+  ul li {
+    padding-right: 10px;
+    padding-left: 10px;
+    list-style-type: none;
+
+    i {
+      @extend .fab;
+    }
+
+    &.facebook i {
+      @extend .fa-facebook-f;
+    }
+
+    &.twitter i {
+      @extend .fa-twitter;
+    }
+
+    &.linkedin i {
+      @extend .fa-linkedin-in;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  ul li a {
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    font-size: 16px;
+    transition: .4s all ease;
+
+    @include media-breakpoint-up(md) {
+      font-size: 18px;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}

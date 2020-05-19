@@ -1,0 +1,41 @@
+/** Import Bootstrap functions */
+@import '~bootstrap/scss/functions';
+
+$primary: #aa2525;
+$secondary: #4b4b4b;
+$success: #4ec04e;
+$info: cyan;
+$warning: #ffc64a;
+$danger: $primary;
+$light: #b9b9b9;
+$dark: #222d32;
+$darken: #101010;
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+/** Fonts */
+$font-family-sans-serif: 'Poppins', sans-serif !default;
+$headings-font-family: $font-family-sans-serif;
+$font-family-monospace: $font-family-sans-serif;
+$font-family-base: $font-family-sans-serif;
+$btn-font-family: $font-family-sans-serif;
+//
+$font-weight-normal: 400 !default;
+$font-weight-lighter: $font-weight-normal !default;
+$font-weight-light: $font-weight-normal !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: $font-weight-bold;
+
+$headings-font-weight: $font-weight-bolder !default;
+//
+$font-size-base: .9rem !default;
+$line-height-base: 1.6 !default;
+
+/** Layout settings **/
+$body-bg: #ffffff;
+$body-color: #666666;
+$globalBorderRadius: 5px;
+$product-menu-background-image: url('../images/menu_product.png');
+$product-menu-mobile-background-image: url('../images/menu_product_mobile.png');

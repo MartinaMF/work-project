@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+
+$font-path: '../fonts';
+
+/** Import variables */
+@import 'common/variables';
+
+/** Autoload all plugins */
+@import './autoload/**/*';
+
+/** Import icomoon icons */
+@import 'icomoon';
+
+/** Import layout styles */
+@import 'layouts/base';
+@import 'layouts/tinymce';
+@import 'layouts/buttons';
+@import 'layouts/form';
+@import 'layouts/article';
+@import 'layouts/event-item';
+@import 'layouts/video';
+@import 'layouts/wp-classes';
+
+/** Import components */
+@import 'components/header';
+@import 'components/footer';
+@import 'components/sections';
+@import 'components/asides';
+@import 'components/aside-bars';

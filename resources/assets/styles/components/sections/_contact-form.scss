@@ -1,0 +1,46 @@
+section.section.section--contact-form form {
+  @extend .form-complete;
+
+  .form-sides {
+    @include media-breakpoint-up(xl) {
+      display: flex;
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+  }
+
+  .form-sides .side {
+    @include media-breakpoint-up(xl) {
+      flex: 0 0 50%;
+      width: 50%;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+
+  .form-sides .side:not(:first-child) {
+    margin-top: 20px;
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 0;
+    }
+  }
+
+  .input-group textarea {
+    @include media-breakpoint-up(xl) {
+      height: 220px;
+    }
+  }
+
+  .button-group {
+    margin-top: 20px;
+
+    button {
+      height: 34px;
+
+      @include media-breakpoint-up(md) {
+        height: 60px;
+      }
+    }
+  }
+}

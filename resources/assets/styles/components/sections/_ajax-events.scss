@@ -1,0 +1,52 @@
+section.section.section--ajax-events .events-ajax-loader {
+  i {
+    display: none;
+    color: $primary;
+    font-size: 70px;
+  }
+
+  &.is-loading i {
+    display: block;
+  }
+
+  &.is-loading button {
+    display: none;
+  }
+}
+
+section.section.section--ajax-events .navigation {
+  margin-top: 30px;
+
+  .screen-reader-text {
+    display: none !important;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+
+    & > * {
+      margin: 0 5px;
+    }
+
+    a {
+      @extend .site-btn;
+      @extend .site-btn--primary;
+    }
+
+    .nav-next a::before {
+      @include icomoon();
+
+      content: '\e900';
+      display: inline-block;
+      margin-right: 15px;
+      font-size: 12px;
+      transform: rotate(180deg);
+    }
+
+    .nav-next a::after {
+      display: none;
+    }
+  }
+}

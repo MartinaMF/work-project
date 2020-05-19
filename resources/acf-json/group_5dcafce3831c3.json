@@ -1,0 +1,40 @@
+{
+    "key": "group_5dcafce3831c3",
+    "title": "Forms: PDF catalog",
+    "fields": [
+        {
+            "key": "field_5dcafce388af9",
+            "label": "Email",
+            "name": "email",
+            "type": "read_only",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "copy_to_clipboard": 0,
+            "display_type": "text"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "forms_pdf"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1581886908
+}

@@ -1,0 +1,23 @@
+section.section.section--video .video-hld {
+  @extend .video-item;
+
+  height: calc((100vw - 50px) * 9 / 16);
+  margin-top: 30px;
+
+  @include media-breakpoint-up(sm) {
+    height: 275px;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 388px;
+    margin-top: 50px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 523px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 624px;
+  }
+}

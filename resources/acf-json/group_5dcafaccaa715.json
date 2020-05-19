@@ -1,0 +1,88 @@
+{
+    "key": "group_5dcafaccaa715",
+    "title": "Forms: Contact",
+    "fields": [
+        {
+            "key": "field_5dcafb073d819",
+            "label": "Name",
+            "name": "name",
+            "type": "read_only",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "copy_to_clipboard": 0,
+            "display_type": "text"
+        },
+        {
+            "key": "field_5dcafc0a3d81a",
+            "label": "Email",
+            "name": "email",
+            "type": "read_only",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "copy_to_clipboard": 0,
+            "display_type": "text"
+        },
+        {
+            "key": "field_5dcafc0f3d81b",
+            "label": "Phone",
+            "name": "phone",
+            "type": "read_only",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "copy_to_clipboard": 0,
+            "display_type": "text"
+        },
+        {
+            "key": "field_5dcafc153d81c",
+            "label": "Message",
+            "name": "message",
+            "type": "read_only",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "copy_to_clipboard": 0,
+            "display_type": "text"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "forms_contact"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1581886947
+}

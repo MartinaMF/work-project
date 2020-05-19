@@ -1,0 +1,31 @@
+section.section.section--device-model {
+  .device {
+    margin-top: 45px;
+
+    .model-hld {
+      margin-top: 10px;
+      margin-bottom: 60px;
+
+      .model-image img {
+        width: 40%;
+      }
+
+      h5 {
+        margin-top: 20px;
+        color: black;
+      }
+
+      h5 span {
+        color: $primary;
+      }
+
+      p {
+        @include media-breakpoint-up(md) {
+          font-size: 16px;
+        }
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
+}

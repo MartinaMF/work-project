@@ -1,0 +1,33 @@
+aside.aside--image .image-hld {
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: calc((100vw - 50px) * 9 / 16);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border-radius: $globalBorderRadius;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @include media-breakpoint-up(sm) {
+    height: 275px;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 255px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 345px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 410px;
+  }
+
+  img {
+    display: none;
+  }
+}

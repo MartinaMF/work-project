@@ -1,0 +1,123 @@
+section.section.section--hero-generic {
+  position: relative;
+  z-index: 1;
+  height: calc(9 / 16 * 100vw);
+  max-height: 350px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background: $primary;
+
+  @include media-breakpoint-up(xl) {
+    max-height: 400px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+  }
+
+  h1 {
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 1;
+    text-transform: lowercase;
+
+    @include media-breakpoint-up(md) {
+      font-size: 44px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 60px;
+    }
+  }
+
+  .img-hld {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: $primary;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: darken;
+
+    img {
+      display: none;
+    }
+  }
+
+  .breadcrumbs {
+    display: block;
+    margin: 0 0 15px;
+    padding: 0;
+
+    a,
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      color: #ffffff;
+      font-size: 14px;
+      text-transform: lowercase;
+
+      @include media-breakpoint-up(md) {
+        font-size: 16px;
+      }
+    }
+
+    a {
+      position: relative;
+      z-index: 1;
+    }
+
+    a::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      max-width: 0;
+      height: 1px;
+      background: #ffffff;
+      transition: .4s max-width ease;
+    }
+
+    a:hover::before {
+      max-width: 100%;
+    }
+  }
+}
+
+section.section.section--hero-generic.hospitality,
+section.section.section--hero-generic.product {
+  max-height: 200px;
+
+  @include media-breakpoint-up(md) {
+    max-height: 250px;
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 1.2;
+
+    @include media-breakpoint-up(md) {
+      font-size: 30px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 40px;
+    }
+  }
+}
+

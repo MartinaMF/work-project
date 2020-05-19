@@ -1,0 +1,30 @@
+@import '~aos/dist/aos.css';
+
+/**
+ * DURATION AND DELAY
+ */
+
+[data-aos] {
+  @for $i from 1 through 60 {
+    body[data-aos-duration='#{$i * 50}'] &,
+    &[data-aos][data-aos-duration='#{$i * 50}'] {
+      &::before,
+      &::after {
+        transition-duration: #{$i * 50}ms;
+      }
+    }
+
+    body[data-aos-delay='#{$i * 50}'] &,
+    &[data-aos][data-aos-delay='#{$i * 50}'] {
+      &::before,
+      &::after {
+        transition-delay: 0;
+      }
+
+      &.aos-animate::before,
+      &.aos-animate::after {
+        transition-delay: #{$i * 50}ms;
+      }
+    }
+  }
+}

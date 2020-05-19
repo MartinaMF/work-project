@@ -1,0 +1,47 @@
+section.section.section--product-gallery {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .gallery-hld {
+    margin-top: 40px;
+
+    p {
+      display: block;
+      margin: 25px 0 50px 0;
+      padding: 0;
+      color: #666666;
+      font-size: 14px;
+      font-weight: 400;
+
+      @include media-breakpoint-up(md) {
+        font-size: 16px;
+      }
+    }
+
+    .img-hld {
+      display: block;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 240px;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      border-radius: $globalBorderRadius;
+    }
+
+    .img-hld img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      transition: all .3s ease;
+
+      &:hover {
+        transform: scale(1.2) rotate(3deg);
+      }
+    }
+  }
+}
+

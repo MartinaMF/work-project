@@ -1,0 +1,37 @@
+section.section.section--image-content {
+  .image-hld {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-start;
+
+      &.is-content-right {
+        justify-content: flex-end;
+      }
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+
+      @include media-breakpoint-up(lg) {
+        width: auto;
+        max-width: none;
+      }
+    }
+  }
+
+  .button-hld {
+    margin-top: 40px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 60px;
+    }
+  }
+}
